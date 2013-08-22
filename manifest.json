@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+
+    "name":         "AtTask Issue Info Copying Extension",
+    "description":  "This extension will install a button on the tool bar that allows you to copy interesting AtTask Issue information to the clipboard.",
+    "version":      "0.1",
+    "permissions":  [
+        ""
+        ],
+    "browser_action": {
+        "default_icon": "attask_icon.png",
+        "default_popup": "popup.html"
+    }
+}
