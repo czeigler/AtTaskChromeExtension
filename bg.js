@@ -1,27 +1,10 @@
 
-
-var atTaskChromeExtension = {
-
-
-    /**
-     * Copy AtTask Issue Data from the current window
-     */
-    copyIssueData: function () {
-        alert("hello world!");
-        //document.body.bgColor='red'
-    }
-};
-
-
-function copyIssueData() {
-    alert('hello world!');
+function getParameterByName(url, name) {
+    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(url);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-
-
-
-//atTaskChromeExtension.copyIssueData();
-//document.addEventListener('DOMContentLoaded', function () {
-//});
 
 
 
@@ -29,23 +12,22 @@ function copyIssueData() {
 
 chrome.browserAction.onClicked.addListener(function (tab) {
 
-    alert(tab.url);
+
+//    console.log("start");
 
 
-    var tempNode = $("attaskChromeExtension_temp");
-    tempNode.textValue = tab.url;
-    tempNode.select();
-    document.execCommand("copy");
+    var guid = getParameterByName(tab.url, 'ID');
 
+    var jqxhr = $.getJSON( "https://hub.attask.com/attask/api/issue/" + guid + "?fields=referenceNumber", function(json) {
+        var output = 'Issue ' + json.data.referenceNumber + ', "' + json.data.name + '", ' + 'https://hub.attask.com/issue/view?ID=' + guid;
+        alert(output);
 
+    });
+//        .done(function() { console.log( "second success" ); })
+//        .fail(function() { console.log( "error" ); })
+//        .always(function() { console.log( "complete" ); });
 
-
-
-//    var sandbox = tab.url;
-//    document.execCommand('copy');
-//    sandbox.val('');
-
-    alert('worked');
 
 
 });
+
