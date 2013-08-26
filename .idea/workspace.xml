@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee967143-dc5c-492e-b711-81e75f92461e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/background.html" afterPath="$PROJECT_DIR$/background.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bg.js" afterPath="$PROJECT_DIR$/bg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/attaskChromeExtension.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/attaskChromeExtension.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/popup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/popup2.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AtTaskChromeExtension.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ee967143-dc5c-492e-b711-81e75f92461e" time="1377535612372" ignored="false" />
+    <file path="/Dummy.txt" changelist="ee967143-dc5c-492e-b711-81e75f92461e" time="1377536124676" ignored="false" />
     <file path="/popup.html" changelist="ee967143-dc5c-492e-b711-81e75f92461e" time="1377291978378" ignored="false" />
     <file path="/attaskChromeExtension.js" changelist="ee967143-dc5c-492e-b711-81e75f92461e" time="1377209260817" ignored="false" />
     <file path="/manifest.json" changelist="ee967143-dc5c-492e-b711-81e75f92461e" time="1377535567852" ignored="false" />
@@ -139,35 +140,7 @@
     <favorites_list name="AtTaskChromeExtension" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="manifest.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="-12.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="background.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/background.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="23" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.5714286">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bg.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bg.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.4330827">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -404,7 +377,11 @@
       <created>1377535616299</created>
       <updated>1377535616299</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Totally working for copying issue data to the clipboard.">
+      <created>1377536128226</created>
+      <updated>1377536128226</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -481,7 +458,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Most functionality working." />
+    <option name="LAST_COMMIT_MESSAGE" value="Totally working for copying issue data to the clipboard." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -498,6 +475,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Some stuff done." />
     <MESSAGE value="Most functionality working." />
+    <MESSAGE value="Totally working for copying issue data to the clipboard." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -524,44 +502,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/attaskChromeExtension.js">
+    <entry file="file://$PROJECT_DIR$/bg.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/popup2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="655" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/popup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="2408" selection-end="2408" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.4330827">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/background.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="23" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.5714286">
+        <state line="1" column="23" selection-start="39" selection-end="39" vertical-scroll-proportion="0.01863354">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="-12.0">
+        <state line="21" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="0.39130434">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bg.js">
+    <entry file="file://$PROJECT_DIR$/attaskChromeExtension.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.4330827">
+        <state line="1" column="0" selection-start="1" selection-end="1" vertical-scroll-proportion="0.018045112">
           <folding />
         </state>
       </provider>
