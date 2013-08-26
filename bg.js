@@ -7,25 +7,31 @@ function getParameterByName(url, name) {
 }
 
 
-
+console.log("start");
 
 
 chrome.browserAction.onClicked.addListener(function (tab) {
-
-
-//    console.log("start");
 
 
     var guid = getParameterByName(tab.url, 'ID');
 
     var jqxhr = $.getJSON( "https://hub.attask.com/attask/api/issue/" + guid + "?fields=referenceNumber", function(json) {
         var output = 'Issue ' + json.data.referenceNumber + ', "' + json.data.name + '", ' + 'https://hub.attask.com/issue/view?ID=' + guid;
-        alert(output);
+
+        var $test = $('#cliboardText');
+        $test.text(output);
+        $test.select();
+        document.execCommand('copy');
+
+
 
     });
 //        .done(function() { console.log( "second success" ); })
 //        .fail(function() { console.log( "error" ); })
 //        .always(function() { console.log( "complete" ); });
+
+
+
 
 
 

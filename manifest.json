@@ -16,12 +16,13 @@
     "permissions": [
         "tabs",
         "clipboardWrite",
+        "clipboardRead",
         "*://*/*"
     ],
 
     "background": {
         "persistent": true
-        , "scripts": ["bg.js", "jquery-2.0.3.min.js"]
+//        , "scripts": ["jquery-2.0.3.min.js"]
         , "page": "background.html"
     },
 
