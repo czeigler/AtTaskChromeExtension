@@ -6,17 +6,34 @@ function getParameterByName(url, name) {
     return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-
-console.log("start");
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 
 chrome.browserAction.onClicked.addListener(function (tab) {
 
-
+    const baseUrl = "https://hub.attask.com/";
+    var url;
     var guid = getParameterByName(tab.url, 'ID');
+    var issue = (tab.url.indexOf("issue") != -1);
+    var outputUrl;
+    var text;
+    var type;
 
-    var jqxhr = $.getJSON( "https://hub.attask.com/attask/api/issue/" + guid + "?fields=referenceNumber", function(json) {
-        var output = 'Issue ' + json.data.referenceNumber + ', "' + json.data.name + '", ' + 'https://hub.attask.com/issue/view?ID=' + guid;
+    if (issue) {
+        type = "issue";
+    } else {
+        type = "task"
+    }
+
+    url = baseUrl + "attask/api/" + type + "/" + guid + "?fields=referenceNumber";
+    outputUrl = baseUrl + type + "/view?ID=";
+    text = capitalizeFirstLetter(type) + ' ';
+
+
+    var jqxhr = $.getJSON(url, function(json) {
+        var output = text + json.data.referenceNumber + ', "' + json.data.name + '", ' + outputUrl + guid;
 
         var $test = $('#cliboardText');
         $test.text(output);
@@ -26,13 +43,6 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 
 
     });
-//        .done(function() { console.log( "second success" ); })
-//        .fail(function() { console.log( "error" ); })
-//        .always(function() { console.log( "complete" ); });
-
-
-
-
 
 
 });
